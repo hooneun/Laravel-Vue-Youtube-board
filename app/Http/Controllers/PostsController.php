@@ -42,7 +42,10 @@ class PostsController extends Controller
 
     public function getPosts()
     {
-        $posts = Post::latest()->take(100)->get();
+        $posts = Post::latest()
+            ->withCount('comments')
+            ->take(100)
+            ->get();
 
         return response()->json([
             'success' => true,

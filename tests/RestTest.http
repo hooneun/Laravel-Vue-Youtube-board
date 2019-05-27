@@ -16,6 +16,15 @@ Content-Type: application/json
 
 ###
 
-GET http://videoboard.test/api/posts
+POST http://videoboard.test/api/comments/create
+Content-Type: application/json
+
+{
+  "post_id" : 1,
+  "body" : "comment_test"
+}
+###
+
+GET http://videoboard.test/api/comments/1
 
 ###

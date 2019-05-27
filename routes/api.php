@@ -18,3 +18,5 @@ $router->get('/', function () use ($router) {
 
 $router->post('/create', 'PostsController@createPost');
 $router->get('/posts', 'PostsController@getPosts');
+$router->post('/comments/create', 'CommentsController@createComment');
+$router->get('/comments/{post_id}', 'Commentscontroller@getComments');
